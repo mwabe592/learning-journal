@@ -14,20 +14,13 @@
   </head>
   <body>
     <head>
-      <nav>
-        <div class="logo">
-          <img src="images/logo.png" alt="logo in the nav bar" />
-          <p class="nav-heading">My Learning Journal</p>
-        </div>
-        <ul class="nav-links">
-          <a href="index.html"><li class="section-link">Home</li></a>
-          <a href="about-me.html"><li class="section-link">About Me</li></a>
-        </ul>
-      </nav>
+      <!-- NAV BAR -->
+      <nav id="nav-bar"></nav>
     </head>
     <main>
+      <!-- HERO -->
       <section class="hero">
-        <div class="hero-text">
+        <div class="hero-text" id="hero-text">
           <p class="date post-intro">31 October, 2024</p>
           <h1 class="hero-heading post-intro">
             My journey as a self taught web dev
@@ -39,75 +32,85 @@
           </p>
         </div>
       </section>
+
+      <!-- BLOG SECTION -->
       <section class="blog-section">
         <div class="blog-post content-margin">
           <img src="images/blog-image-one.png" alt="thumbnail of blog post" />
-          <p class="date">31 October, 2024</p>
-          <h2 class="blog-title">Blog one</h2>
-          <p class="description">
-            I'm excited to start a new learning journey as a Scrimba Bootcamp
-            student! After several months of learning in the Frontend Developer
-            Career Path.
-          </p>
+          <div class="blog-post-text">
+            <p class="date">31 October, 2024</p>
+            <h2 class="blog-title">Blog one</h2>
+            <p class="description">
+              I'm excited to start a new learning journey as a Scrimba Bootcamp
+              student! After several months of learning in the Frontend
+              Developer Career Path.
+            </p>
+          </div>
         </div>
         <div class="blog-post content-margin">
           <img src="images/blog-image-two.png" alt="thumbnail of blog post" />
-          <p class="date">31 October, 2024</p>
-          <h2 class="blog-title">Blog two</h2>
-          <p class="description">
-            I'm excited to start a new learning journey as a Scrimba Bootcamp
-            student! After several months of learning in the Frontend Developer
-            Career Path.
-          </p>
+          <div class="blog-post-text">
+            <p class="date">31 October, 2024</p>
+            <h2 class="blog-title">Blog two</h2>
+            <p class="description">
+              I'm excited to start a new learning journey as a Scrimba Bootcamp
+              student! After several months of learning in the Frontend
+              Developer Career Path.
+            </p>
+          </div>
         </div>
         <div class="blog-post content-margin">
           <img src="images/blog-image-three.png" alt="thumbnail of blog post" />
-          <p class="date">31 October, 2024</p>
-          <h2 class="blog-title">Blog three</h2>
-          <p class="description">
-            I'm excited to start a new learning journey as a Scrimba Bootcamp
-            student! After several months of learning in the Frontend Developer
-            Career Path.
-          </p>
+          <div class="blog-post-text">
+            <p class="date">31 October, 2024</p>
+            <h2 class="blog-title">Blog three</h2>
+            <p class="description">
+              I'm excited to start a new learning journey as a Scrimba Bootcamp
+              student! After several months of learning in the Frontend
+              Developer Career Path.
+            </p>
+          </div>
         </div>
-        <div class="blog-post content-margin">
+        <div class="blog-post content-margin hidden">
           <img src="images/blog-image-four.png" alt="thumbnail of blog post" />
-          <p class="date">31 October, 2024</p>
-          <h2 class="blog-title">Blog four</h2>
-          <p class="description">
-            I'm excited to start a new learning journey as a Scrimba Bootcamp
-            student! After several months of learning in the Frontend Developer
-            Career Path.
-          </p>
+          <div class="blog-post-text">
+            <p class="date">31 October, 2024</p>
+            <h2 class="blog-title">Blog four</h2>
+            <p class="description">
+              I'm excited to start a new learning journey as a Scrimba Bootcamp
+              student! After several months of learning in the Frontend
+              Developer Career Path.
+            </p>
+          </div>
         </div>
-        <div class="blog-post content-margin">
+        <div class="blog-post content-margin hidden">
           <img src="images/blog-image-five.png" alt="thumbnail of blog post" />
-          <p class="date">31 October, 2024</p>
-          <h2 class="blog-title">Blog five</h2>
-          <p class="description">
-            I'm excited to start a new learning journey as a Scrimba Bootcamp
-            student! After several months of learning in the Frontend Developer
-            Career Path.
-          </p>
+          <div class="blog-post-text">
+            <p class="date">31 October, 2024</p>
+            <h2 class="blog-title">Blog five</h2>
+            <p class="description">
+              I'm excited to start a new learning journey as a Scrimba Bootcamp
+              student! After several months of learning in the Frontend
+              Developer Career Path.
+            </p>
+          </div>
         </div>
-        <div class="blog-post content-margin">
+        <div class="blog-post content-margin hidden">
           <img src="images/blog-image-six.png" alt="thumbnail of blog post" />
-          <p class="date">31 October, 2024</p>
-          <h2 class="blog-title">Blog six</h2>
-          <p class="description">
-            I'm excited to start a new learning journey as a Scrimba Bootcamp
-            student! After several months of learning in the Frontend Developer
-            Career Path.
-          </p>
+          <div class="blog-post-text">
+            <p class="date">31 October, 2024</p>
+            <h2 class="blog-title">Blog six</h2>
+            <p class="description">
+              I'm excited to start a new learning journey as a Scrimba Bootcamp
+              student! After several months of learning in the Frontend
+              Developer Career Path.
+            </p>
+          </div>
         </div>
       </section>
-      <p class="view-more">View More</p>
+      <p class="view-more" id="view-more">View More</p>
     </main>
-    <footer>
-      <div class="footer-text">
-        <h3>My Learning Journal</h3>
-        <p>Copyright ©️ 2024</p>
-      </div>
-    </footer>
+    <footer id="footer"></footer>
+    <script src="index.js"></script>
   </body>
 </html>

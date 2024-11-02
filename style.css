@@ -10,17 +10,16 @@ body {
 
 /*margin applied to main content excluding hero sections*/
 .content-margin {
-  margin: 2.5em 1.2em;
-}
-
-main {
-  font-size: 25px;
+  margin: 2.5em 0.7em;
 }
 
 .hero,
 .blog-post,
-.post-intro {
-  font-size: 25px;
+.post-intro,
+.view-more,
+.current-post,
+footer {
+  font-size: 20px;
 }
 
 /*HEADER*/
@@ -100,16 +99,28 @@ a {
 .blog-post {
   box-shadow: 8px 8px 16px 0px #888888;
   border-radius: 14px;
+  max-height: 650px;
+}
+
+.hidden {
+  display: none;
 }
 
 .blog-post:hover {
   box-shadow: 8px 8px 16px 5px #888888;
 }
 
-.blog-post p,
+.blog-post-text {
+  padding: 0.1em 0.3em;
+  margin: 0;
+}
+
+.blog-post p {
+  margin-top: 0.6em;
+}
+
 .blog-post h2 {
-  margin: 0.125em 0;
-  padding: 0.94em;
+  margin: 0;
 }
 
 .blog-post img {
@@ -124,7 +135,6 @@ a {
   text-align: center;
   cursor: pointer;
   font-weight: 600;
-  font-size: 25px;
 }
 
 .view-more:hover {
@@ -135,7 +145,6 @@ a {
 
 footer {
   background-color: #202020;
-  font-size: 1.25rem;
   padding: 3em 0;
   display: flex;
   justify-content: center;
@@ -145,7 +154,6 @@ footer {
 .footer-text {
   display: inline-block;
   text-align: center;
-  /* border: red 3px solid; */
 }
 
 .footer-text h3,
@@ -163,16 +171,13 @@ footer {
 }
 
 /*BLOG POST PAGE*/
-.current-post {
-}
 
 .current-post img {
   width: 100%;
-  padding: 1.875rem 0;
+  border-radius: 5px;
 }
 
 .current-post p {
-  /* font-weight: 500; */
   line-height: 1.5;
 }
 
@@ -182,28 +187,45 @@ footer {
 
 /*ABOUT ME PAGE*/
 
+.about-page-intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-page-intro h1 {
+  font-size: 50px;
+}
 .img-div {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
 }
 
 .personal-img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  object-fit: cover;
+}
+
+.intro-text h1,
+.intro-text p {
+  margin: 0;
+}
+
+.about-page-text {
+  margin-top: 2.4em;
 }
 
 /*MEDIA QUERIES*/
 
+/*Desktop*/
 @media (min-width: 1224px) {
-  /* body {
-    background-color: red;
-  } */
+  .content-margin {
+    margin: 2em 2em;
+  }
 
   .hero {
     padding-top: 12em;
-    /* background-repeat: no-repeat;
-    background-size: cover; */
     background-repeat: no-repeat;
     background-size: cover; /* Keeps the image wide */
     background-position: center 20%;
@@ -211,23 +233,75 @@ footer {
 
   .hero-text {
     max-width: 70vw;
+    cursor: pointer;
   }
 
   .blog-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; /*this turns the container into 
     3 equal grid columns*/
-    margin: 0 1.5em;
   }
 
-  .blog-post {
+  /*BLOG POST PAGE*/
+  .current-post-text {
+    margin: 0.4em 2.5em;
+  }
+
+  /*ABOUT PAGE*/
+  .about-margin {
+    margin: 1em 5em;
+  }
+
+  .intro-text {
+    display: flex;
+  }
+
+  .about-page-intro {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .intro-text {
+    flex-direction: column;
+    flex: 1;
+    margin-left: 50px;
+  }
+
+  .img-div {
+    max-width: 300px;
+    height: auto;
+    flex: 0 0 auto;
+  }
+
+  .personal-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 }
 
+/*Tablet*/
 @media (min-width: 768px) and (max-width: 1223px) {
+  .about-margin {
+    margin: 4em 4em;
+  }
+
   .blog-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0 0.2em;
+  }
+
+  /*ABOUT ME PAGE*/
+  .about-page-intro {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .intro-text {
+    flex: 1;
+    margin-left: 50px;
   }
 }
